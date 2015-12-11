@@ -10,9 +10,15 @@
 
 	<properties>
 		<junit.version>4.12</junit.version>
+		<javax.rs.version>1.1.1</javax.rs.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>jsr311-api</artifactId>
+			<version>${javax.rs.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
