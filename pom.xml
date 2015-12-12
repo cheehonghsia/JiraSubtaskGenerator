@@ -11,6 +11,7 @@
 	<properties>
 		<junit.version>4.12</junit.version>
 		<javax.rs.version>1.1.1</javax.rs.version>
+		<inject.version>1</inject.version>
 	</properties>
 
 	<dependencies>
@@ -18,6 +19,21 @@
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>jsr311-api</artifactId>
 			<version>${javax.rs.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${inject.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.atlassian.jira</groupId>
+			<artifactId>jira-rest-java-client-api</artifactId>
+			<version>2.0.0-m19</version>
+		</dependency>
+		<dependency>
+			<groupId>com.atlassian.jira</groupId>
+			<artifactId>jira-rest-java-client-core</artifactId>
+			<version>2.0.0-m19</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -50,4 +66,19 @@
 		</pluginManagement>
 		<finalName>JiraSubtaskGenerator</finalName>
 	</build>
+	<repositories>
+		<repository>
+			<id>atlassian-public</id>
+			<url>https://maven.atlassian.com/repository/public</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+		</repository>
+	</repositories>
 </project>
